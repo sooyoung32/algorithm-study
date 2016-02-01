@@ -7,6 +7,7 @@ import java.util.StringTokenizer;
 
 /**
  * Created by sooyoung on 16. 2. 1.
+ * 시계 맞추기
  */
 public class ClockSync {
 
@@ -33,7 +34,7 @@ public class ClockSync {
     static int clocks[] = new int[16];
 
     /**
-     * @param args
+     * @param args 인자
      * @throws NumberFormatException
      * @throws IOException
      */
@@ -60,7 +61,7 @@ public class ClockSync {
     /**
      * 검증 : 완료 되었는가?
      *
-     * @return
+     * @return 검증결과
      */
     public static boolean isOK() {
         boolean result = true;
@@ -71,10 +72,10 @@ public class ClockSync {
 
     // 버튼 누르기
     public static void push(int switchNumber) {
-        for (int b : switchClock[switchNumber]) {
-            clocks[b] += 3;//시간을 더해줌.
-            if (clocks[b] >= 15)//convert
-                clocks[b] = 3;
+        for (int index : switchClock[switchNumber]) {
+            clocks[index] += 3;//시간을 더해줌.
+            if (clocks[index] >= 15)//convert
+                clocks[index] = 3;
         }
     }
 
