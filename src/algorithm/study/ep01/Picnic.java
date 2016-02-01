@@ -1,4 +1,4 @@
-package algorithm.study.ep1;
+package algorithm.study.ep01;
 
 import java.io.BufferedReader;
 import java.io.IOException;
